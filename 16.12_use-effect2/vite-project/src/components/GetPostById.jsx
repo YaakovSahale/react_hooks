@@ -9,9 +9,8 @@ export default function GetPostById({ id }) {
       .then((res) => res.json())
       .then((data) => setPost(data))
       .catch((err) => console.error(err));
-
   };
-  
+
   useEffect(getPost, [id]);
 
   return (

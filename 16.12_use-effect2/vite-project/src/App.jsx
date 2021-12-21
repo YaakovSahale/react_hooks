@@ -7,19 +7,19 @@ import GetPostById from "./components/GetPostById";
 import UseEffectUnmount from "./components/UseEffectUnmount";
 
 function App() {
-  // const [id, setId] = useState(1);
-  const [flag, setFlag] = useState(false);
+  const [id, setId] = useState(1);
+  // const [flag, setFlag] = useState(false);
   return (
     <div className="App">
       {/* <Posts /> */}
       {/* <TitleCounter/> */}
       {/* <MyComponent/> */}
 
-      {/* <GetPostById id={id} setId={setId} />
-      <input type="number" onChange={(e) => setId(e.target.value)} /> */}
+      <GetPostById id={id} setId={setId} />
+      <input type="number" onChange={(e) => setId(e.target.value)} />
 
-      <button onClick={() => setFlag(!flag)}>click me</button>
-      {flag ? <UseEffectUnmount /> : null}
+      {/* <button onClick={() => setFlag(!flag)}>click me</button> */}
+      {/* {flag ? <UseEffectUnmount /> : null} */}
     </div>
   );
 }
